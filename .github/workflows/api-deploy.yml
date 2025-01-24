@@ -61,6 +61,9 @@ jobs:
         with:
           dotnet-version: ${{env.DOTNET_VERSION}}
 
+      - name: Hello
+        run: echo "Hello"
+
       - name: Dotnet execute tests
         run: dotnet test
 
