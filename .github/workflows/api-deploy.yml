@@ -53,13 +53,15 @@ jobs:
       PROJECT_FOLDER: "RabbitMqProductAPI"
     needs: build
     steps:
+      - uses: actions/checkout@v4
+      
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: ${{env.DOTNET_VERSION}}
 
       - name: Tests list
-        run: dotnet test --list-tests
+        run: dotnet test .
 
       - name: Hello
         run: echo "Hello"
