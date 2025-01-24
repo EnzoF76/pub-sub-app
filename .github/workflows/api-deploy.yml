@@ -59,6 +59,9 @@ jobs:
         with:
           dotnet-version: ${{env.DOTNET_VERSION}}
 
+      - name: LS
+        run: ls -la
+
       - name: Tests list
         run: dotnet test .
 
