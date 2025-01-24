@@ -50,6 +50,7 @@ jobs:
 
   tests:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - uses: actions/checkout@v4
       - name: Dotnet execute tests
@@ -57,7 +58,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: build
+    needs: tests
     environment:
       name: "Azure"
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
