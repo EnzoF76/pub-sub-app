@@ -52,6 +52,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DOTNET_VERSION: "9.x"
+      PROJECT_FOLDER: "RabbitMqProductAPI"
     needs: build
     steps:
       - uses: actions/checkout@v4
