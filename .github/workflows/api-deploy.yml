@@ -48,6 +48,9 @@ jobs:
           name: .net-app
           path: ${{env.PROJECT_FOLDER}}/myapp
 
+      - name: Dotnet execute tests
+        run: dotnet test
+
   deploy:
     runs-on: ubuntu-latest
     needs: build
