@@ -52,8 +52,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DOTNET_VERSION: "9.x"
-      VALUE_1: 8
-      VALUE_2: 7
     needs: build
     steps:
       - uses: actions/checkout@v4
@@ -68,7 +66,7 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: Hello
-        run: echo (${{env.VALUE_1}} + ${{env.VALUE_2}})
+        run: echo "Hello"
 
       - name: Dotnet execute tests
         run: dotnet test
