@@ -66,6 +66,9 @@ jobs:
         working-directory: ${{env.PROJECT_FOLDER}}
         run: dotnet build --configuration Release
 
+      - name: Tests list
+        run: dotnet test --list-tests
+
       - name: Hello
         run: echo "Hello"
 
