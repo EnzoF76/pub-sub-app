@@ -63,8 +63,6 @@ jobs:
 
       - name: Dotnet execute tests
         run: dotnet test
-        with:
-          dotnet-version: ${{env.DOTNET_VERSION}}
 
   deploy:
     runs-on: ubuntu-latest
