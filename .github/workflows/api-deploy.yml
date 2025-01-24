@@ -63,7 +63,7 @@ jobs:
         run: ls -la
 
       - name: Tests list
-        run: dotnet test .
+        run: dotnet test ./RabbitMqProductAPI.Tests
 
   deploy:
     runs-on: ubuntu-latest
